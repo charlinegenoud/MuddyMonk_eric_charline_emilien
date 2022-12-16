@@ -7,7 +7,7 @@ header {
 
 body {
     font-family: Monument Extended, sans-serif;
-    margin: 50px;
+    margin: 200px;
     background: red;
     color: white;
     z-index: -5;
@@ -36,4 +36,23 @@ img {
     display: flex;
     align-items: center;
     justify-content: center;
+    position: fixed;
+}
+
+.smthng {
+    margin-right: 600px;
+}
+
+.faceoupile {
+    margin-left: 600px;
+    text-align: right;
+}
+
+.soldatboy {
+    margin-right: 600px;
+}
+
+.suzie {
+    margin-left: 600px;
+    text-align: right;
 }
