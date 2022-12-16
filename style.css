@@ -3,28 +3,29 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-bottom: 200px;
 }
 
 body {
     font-family: Monument Extended, sans-serif;
-    margin: 200px;
+    margin: 100px;
     background: red;
     color: white;
     z-index: -5;
 }
 
 a {
-    font-size: 28px;
+    font-size: 20px;
     font-weight: 400;
 }
 
 p {
-    font-size: 24px;
+    font-size: 18px;
     font-weight: 800;
 }
 
 h1 {
-    font-size: 20px;
+    font-size: 15px;
     font-weight: 400;
 }
 
@@ -37,22 +38,23 @@ img {
     align-items: center;
     justify-content: center;
     position: fixed;
+    margin-left: 530px;
 }
 
 .smthng {
-    margin-right: 600px;
+    margin-right: 800px;
 }
 
 .faceoupile {
-    margin-left: 600px;
+    margin-left: 800px;
     text-align: right;
 }
 
 .soldatboy {
-    margin-right: 600px;
+    margin-right: 800px;
 }
 
 .suzie {
-    margin-left: 600px;
+    margin-left: 800px;
     text-align: left;
 }
