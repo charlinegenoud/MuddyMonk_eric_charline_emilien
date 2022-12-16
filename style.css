@@ -42,20 +42,11 @@ img {
     width: 20%;
 }
 
-.smthng {
+.textleft {
     margin-right: 800px;
 }
 
-.faceoupile {
+.textright {
     margin-left: 800px;
     text-align: right;
-}
-
-.soldatboy {
-    margin-right: 800px;
-}
-
-.suzie {
-    margin-left: 800px;
-    text-align: left;
 }
