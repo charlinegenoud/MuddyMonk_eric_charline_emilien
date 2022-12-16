@@ -1,7 +1,6 @@
 @import url("https://fonts.cdnfonts.com/css/monument-extended");
 header {
     display: flex;
-    margin: auto;
     align-items: center;
     justify-content: center;
 }
@@ -33,9 +32,9 @@ img {
     max-width: 220px;
 }
 
-.perso img {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+.perso {
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
