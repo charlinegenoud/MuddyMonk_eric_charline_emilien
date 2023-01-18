@@ -1,5 +1,5 @@
 @import url("https://fonts.cdnfonts.com/css/monument-extended");
-header {
+.logo {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -8,7 +8,6 @@ header {
 
 body {
     font-family: Monument Extended, sans-serif;
-    margin: 100px;
     background: red;
     color: white;
     z-index: -5;
@@ -33,6 +32,17 @@ img {
     max-width: 220px;
 }
 
+.opening {
+    z-index: 10;
+    width: 100vh;
+}
+
+.opening img {
+    width: 1200px;
+    background-color: blue;
+    z-index: 10;
+}
+
 .perso {
     display: flex;
     align-items: center;
@@ -44,6 +54,7 @@ img {
 
 .textleft {
     margin-right: 800px;
+    animation: 3s linear 1s infinite running;
 }
 
 .textright {
