@@ -17,8 +17,37 @@ window.addEventListener("scroll", function() {
     square.style.transform = "translateY(" + 0.05 * val + "%" + ")";
 });
 
-var slideleft = document.querySelector(".textleft");
-var slideright = document.querySelector(".textright");
+
+// ------------- gros logo Muddy Monk --------------
+var logoMM = document.querySelector(".opening");
+
+opening.addEventListener("click", function() {
+    console.log("click");
+
+
+    if (logoMM == "clicked") {
+
+        opening.style.display = "none";
+
+    }
+
+
+
+
+
+});
+
+
+
+
+
+
+
+
+
+
+
+
 
 // -------------menu burger --------------
 
