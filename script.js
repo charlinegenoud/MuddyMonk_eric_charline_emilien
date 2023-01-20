@@ -1,4 +1,9 @@
 const square = document.querySelector(".perso");
+const textleft = document.querySelector(".textleft");
+const textright = document.querySelector(".textright");
+const textleft2 = document.querySelector(".textleft2");
+const textright2 = document.querySelector(".textright2");
+//const = document.getElementById("smthng")
 
 var scrolled;
 var val;
@@ -8,13 +13,26 @@ window.addEventListener("scroll", function() {
 
     //console.log(scrolled);
 
-    val = scrolled * 0.2;
+    valperso = scrolled * 1;
+    valtext = scrolled * 0.6
 
     console.log("val:" + val);
 
     console.log("---");
+    console.log("valText:" + val);
 
-    square.style.transform = "translateY(" + 0.05 * val + "%" + ")";
+    console.log("T---");
+
+    textleft.style.transform = "translateX(" + 0.08 * valtext + "%" + ")";
+    //textleft.style.wordSpacing = val;
+    textright.style.transform = "translateX(" + -0.08 * valtext + "%" + ")";
+
+    textleft2.style.transform = "translateX(" + 0.08 * valtext + "%" + ")";
+    //textleft.style.wordSpacing = val;
+    textright2.style.transform = "translateX(" + -0.08 * valtext + "%" + ")";
+
+
+    square.style.transform = "translateY(" + 0.05 * valperso + "%" + ")";
 });
 
 
@@ -22,10 +40,10 @@ window.addEventListener("scroll", function() {
 var logoMM = document.querySelector(".opening");
 
 opening.addEventListener("click", function() {
-    console.log("click");
 
 
-    if (logoMM == "clicked") {
+
+    if (logoMM == "click") {
 
         opening.style.display = "none";
 
@@ -39,8 +57,21 @@ opening.addEventListener("click", function() {
 
 
 
+//----------slider---------//
 
 
+
+window.addEventListener("scroll", function() {
+    scrolled = window.pageYOffset;
+
+    console.log(scrolled);
+
+    val = scrolled * 1;
+
+
+    //textleft.style.height = 10 * val + 20 + "px";
+    //textleft.style.width = 10 * val + 20 + "px";
+});
 
 
 

@@ -35,7 +35,8 @@ nav {
 }
 
 main {
-    margin: 0 100px;
+    margin: 0 20;
+    padding-bottom: 500px;
 }
 
 .opening {
@@ -44,7 +45,7 @@ main {
     top: 100px;
     z-index: 10;
     width: 60%;
-    margin-bottom: 200px;
+    padding-bottom: 500px;
 }
 
 .opening img {
@@ -61,17 +62,46 @@ main {
     z-index: 667;
 }
 
+
+/*@keyframes slidein {
+    from {
+        transform: translateX(0%);
+    }
+    to {
+        transform: translateX(100%);
+    }
+}*/
+
 .textleft {
+    position: relative;
     margin-right: 800px;
-    animation: 3s linear 1s infinite running;
+    width: 40%;
 }
 
 .textright {
     margin-left: 800px;
     text-align: right;
+    width: 40%;
+}
+
+.textleft2 {
+    position: relative;
+    margin-right: 800px;
+    width: 40%;
+}
+
+.textright2 {
+    margin-left: 800px;
+    text-align: right;
+    width: 40%;
 }
 
 .logo {
+    display: flex;
+    position: absolute;
+}
+
+.logo img {
     display: flex;
     align-items: center;
     justify-content: center;
