@@ -4,6 +4,9 @@ const textright = document.querySelector(".textright");
 const textleft2 = document.querySelector(".textleft2");
 const textright2 = document.querySelector(".textright2");
 //const = document.getElementById("smthng")
+var slider = document.querySelector(".slider");
+var Next = document.querySelector(".buttonSliderNext");
+var Prev = document.querySelector(".buttonSliderPrev");
 
 var scrolled;
 var val;
@@ -15,12 +18,9 @@ window.addEventListener("scroll", function() {
 
     valperso = scrolled * 1.2;
     valtext = scrolled * 0.6;
-
     console.log("val:" + val);
-
     console.log("---");
     console.log("valText:" + val);
-
     console.log("T---");
 
     textleft.style.transform = "translateX(" + 0.08 * valtext + "%" + ")";
@@ -74,80 +74,21 @@ burgerMenu.addEventListener("click", function() {
     }
 });
 
-//---------SLIDER CAROUSEL----//
+//---------SLIDER CAROUSEL---------//
 
-const previousButtonNew = document.querySelector(".avant");
-
-const nextButtonNew = document.querySelector(".suivant");
-
-const text = document.querySelector(".description");
-
-const sliderImage = document.querySelector(".slider");
-
-var pageNumber = 0;
-
-const content = [{
-        text: "Vinyl",
-
-        backgroundImage: "url('images/slider1.webp')",
-    },
-
-    {
-        text: "Casette",
-
-        backgroundImage: "url('images/slider2.jpeg')",
-    },
-
-    {
-        text: "Merch",
-
-        backgroundImage: "url('images/slider3.jpeg')",
-    },
-];
-
-previousButtonNew.addEventListener("click", function(event) {
-    previous();
-
-    console.log("papapa");
-
-    console.log("--");
-});
-
-nextButtonNew.addEventListener("click", function(event) {
-    next();
-
-    console.log("hgfhjgfjh");
-
-    console.log("--");
-});
-
-const next = function() {
-    pageNumber = pageNumber + 1;
-
-    if (pageNumber >= 3) {
-        pageNumber = 0;
-    }
-
-    updateText();
-};
-
-const previous = function() {
-    pageNumber = pageNumber - 1;
-
-    if (pageNumber < 0) {
-        pageNumber = 3;
-    }
-
-    updateText();
-};
-
-const updateText = function() {
-    text.innerHTML = content[pageNumber].text;
-
-    sliderImage.style.backgroundImage = content[pageNumber].backgroundImage;
-};
-
-updateText();
+(function($) {
+    "use strict";
+    $(document).ready(function() {
+        $(".active-slider").owlCarousel({
+            items: 1,
+            loop: true,
+            nav: true,
+            //animation
+            animateOut: "fadeOut",
+            autoplay: true,
+        });
+    });
+})(jQuery);
 
 // var scrolled;
 
@@ -158,3 +99,34 @@ updateText();
 //     console.log(scrolled);
 
 // });
+
+// ---------slider------------
+
+var mouv;
+var numboitier;
+
+numboitier = 1;
+mouv = 0;
+
+Next.addEventListener("click", function(event) {
+    if ("click") {
+        if (numboitier > 1) {
+            mouv += 70;
+            numboitier -= 1;
+        }
+        slider.style.transform = "translate(" + mouv + "%)";
+    }
+});
+
+Prev.addEventListener("click", function(event) {
+    if ("click") {
+        numboitier += 1;
+        if (numboitier == 5) {
+            mouv = 0;
+            numboitier = 1;
+        } else {
+            mouv -= 70;
+        }
+        slider.style.transform = "translate(" + mouv + "%)";
+    }
+});

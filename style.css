@@ -10,6 +10,7 @@ body {
     background: red;
     color: white;
     z-index: -5;
+    overflow-x: hidden;
 }
 
 a {
@@ -36,8 +37,12 @@ nav {
 }
 
 main {
-    margin: 0 20;
     padding-bottom: 500px;
+    margin: 20;
+}
+
+main div {
+    padding-bottom: 50px;
 }
 
 .opening {
@@ -132,13 +137,13 @@ footer {
 
 .boxMenu li {
     padding: 50px 0;
-    text-decoration: none;
+    text-decoration: #ffffff;
     list-style-type: none;
     font-size: 50px;
 }
 
 .boxMenu li:hover {
-    text-decoration: underline;
+    text-decoration: wavy;
 }
 
 .navbar .nav-container li {
@@ -147,7 +152,7 @@ footer {
 
 .navbar .nav-container a {
     text-decoration: none;
-    color: #0e2431;
+    color: #ffffff;
     font-weight: 500;
     font-size: 40px;
 }
@@ -224,13 +229,102 @@ footer {
 }
 
 
-/*-----------carousel-------*/
+/*--------Slider-----*/
 
 .slider {
-    color: #ffffff;
-    height: 600px;
-    transition: all 0.5s ease-in-out;
-    background-position: bottom;
-    background-size: 50%;
-    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    transition: 1s;
+    scrollbar-width: none;
 }
+
+.slider img {
+    height: 380px;
+}
+
+.sliderClick {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 0 0 200px 0;
+    z-index: 100;
+}
+
+
+/* -----------carousel-------
+        
+        .slider-items {
+            position: relative;
+              slider-height
+            height: 50vh;
+            -webkit-background-size: 100% 100%;
+            background-size: 100% 100%;
+            background-position: 0 0;
+            background-repeat: no-repeat;
+        }
+        you can use background imgae in internal css
+        
+        .bg-img-1 {
+            background-image: url(images/slider1.webp);
+        }
+        
+        .bg-img-2 {
+            background-image: url(images/slider2.jpeg);
+        }
+        
+        .bg-img-3 {
+            background-image: url(images/slider3.jpeg);
+        }
+        slider-style
+        
+        .active-slider {
+            position: relative;
+        }
+        
+        .sigle-item {
+            position: absolute;
+            color: #fff;
+            text-align: center;
+            width: 40%;
+            top: 50%;
+            -webkit-transform: translateY(-50%);
+            -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
+        }
+        over-lay-for-slider
+        
+        .slider-items:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 40%;
+            height: 40%;
+        } */
+
+
+/*owl-nav*/
+
+
+/* .owl-nav div {
+            border: 2px solid #fff;
+            color: #fff;
+            height: 40px;
+            width: 40px;
+            position: absolute;
+            z-index: 9;
+            top: 50%;
+            margin-top: -20px;
+            left: 10px;
+            line-height: 40px;
+            text-align: center;
+            -webkit-transition: linear .3s;
+            -o-transition: linear .3s;
+            transition: linear .3s;
+        }
+        
+        .owl-nav div.owl-next {
+            left: auto;
+            right: 10px;
+        } */
