@@ -103,6 +103,10 @@ main {
     width: 40%;
 }
 
+footer {
+    padding-bottom: 20vh;
+}
+
 
 /* -------------menu burger -------------- */
 
@@ -217,4 +221,16 @@ main {
 
 .nav-container input[type="checkbox"]:checked~.logo {
     display: none;
+}
+
+
+/*-----------carousel-------*/
+
+.slider {
+    color: #ffffff;
+    height: 600px;
+    transition: all 0.5s ease-in-out;
+    background-position: bottom;
+    background-size: 50%;
+    background-repeat: no-repeat;
 }

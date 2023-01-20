@@ -13,8 +13,8 @@ window.addEventListener("scroll", function() {
 
     //console.log(scrolled);
 
-    valperso = scrolled * 1;
-    valtext = scrolled * 0.6
+    valperso = scrolled * 1.2;
+    valtext = scrolled * 0.6;
 
     console.log("val:" + val);
 
@@ -31,35 +31,10 @@ window.addEventListener("scroll", function() {
     //textleft.style.wordSpacing = val;
     textright2.style.transform = "translateX(" + -0.08 * valtext + "%" + ")";
 
-
     square.style.transform = "translateY(" + 0.05 * valperso + "%" + ")";
 });
 
-
-// ------------- gros logo Muddy Monk --------------
-var logoMM = document.querySelector(".opening");
-
-opening.addEventListener("click", function() {
-
-
-
-    if (logoMM == "click") {
-
-        opening.style.display = "none";
-
-    }
-
-
-
-
-
-});
-
-
-
 //----------slider---------//
-
-
 
 window.addEventListener("scroll", function() {
     scrolled = window.pageYOffset;
@@ -68,17 +43,9 @@ window.addEventListener("scroll", function() {
 
     val = scrolled * 1;
 
-
     //textleft.style.height = 10 * val + 20 + "px";
     //textleft.style.width = 10 * val + 20 + "px";
 });
-
-
-
-
-
-
-
 
 // -------------menu burger --------------
 
@@ -98,7 +65,6 @@ menu.addEventListener("click", function() {
     }
 });
 
-
 burgerMenu.addEventListener("click", function() {
     main.classList.toggle("open");
     if (main.classList.contains("open")) {
@@ -108,12 +74,80 @@ burgerMenu.addEventListener("click", function() {
     }
 });
 
+//---------SLIDER CAROUSEL----//
 
+const previousButtonNew = document.querySelector(".avant");
 
+const nextButtonNew = document.querySelector(".suivant");
 
+const text = document.querySelector(".description");
 
+const sliderImage = document.querySelector(".slider");
 
+var pageNumber = 0;
 
+const content = [{
+        text: "Vinyl",
+
+        backgroundImage: "url('images/slider1.webp')",
+    },
+
+    {
+        text: "Casette",
+
+        backgroundImage: "url('images/slider2.jpeg')",
+    },
+
+    {
+        text: "Merch",
+
+        backgroundImage: "url('images/slider3.jpeg')",
+    },
+];
+
+previousButtonNew.addEventListener("click", function(event) {
+    previous();
+
+    console.log("papapa");
+
+    console.log("--");
+});
+
+nextButtonNew.addEventListener("click", function(event) {
+    next();
+
+    console.log("hgfhjgfjh");
+
+    console.log("--");
+});
+
+const next = function() {
+    pageNumber = pageNumber + 1;
+
+    if (pageNumber >= 3) {
+        pageNumber = 0;
+    }
+
+    updateText();
+};
+
+const previous = function() {
+    pageNumber = pageNumber - 1;
+
+    if (pageNumber < 0) {
+        pageNumber = 3;
+    }
+
+    updateText();
+};
+
+const updateText = function() {
+    text.innerHTML = content[pageNumber].text;
+
+    sliderImage.style.backgroundImage = content[pageNumber].backgroundImage;
+};
+
+updateText();
 
 // var scrolled;
 
